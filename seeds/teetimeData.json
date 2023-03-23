@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "course_name": "Pine Valley",
+    "date": "2023-04-01",
+    "time": "10:00",
+    "handicap": 2,
+    "user_id": 1
+  },
+  {
+    "id": 2,
+    "course_name": "Augusta National",
+    "date": "2023-04-02",
+    "time": "14:00",
+    "handicap": 3,
+    "user_id": 2
+  },
+  {
+    "id": 3,
+    "course_name": "Cypress Point Club",
+    "date": "2023-04-03",
+    "time": "09:00",
+    "handicap": 1,
+    "user_id": 3
+  },
+  {
+    "id": 4,
+    "course_name": "Shinnecock Hills Golf Club",
+    "date": "2023-04-04",
+    "time": "11:00",
+    "handicap": 2,
+    "user_id": 4
+  },
+  {
+    "id": 5,
+    "course_name": "Augusta National",
+    "date": "2023-04-05",
+    "time": "08:00",
+    "handicap": 2,
+    "user_id": 5
+  },
+  {
+    "id": 6,
+    "course_name": "Merion Golf Club",
+    "date": "2023-04-06",
+    "time": "10:00",
+    "handicap": 1,
+    "user_id": 6
+  },
+  {
+    "id": 7,
+    "course_name": "Winged Foot Golf Club",
+    "date": "2023-04-07",
+    "time": "11:00",
+    "handicap": 2,
+    "user_id": 7
+  }
+]
