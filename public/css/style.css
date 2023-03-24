@@ -22,3 +22,27 @@ header, .project:not(:last-child) {
   font-weight: bold;
   margin-left: -5px;
 }
+
+.text-center{
+  text-align: center;
+}
+
+.d-block{
+  display: block;
+}
+
+.margin-auto{
+  margin: 0 auto;
+}
+
+.login-form{
+  width: 550px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px 60px;
+  border-radius: 10px;
+  color: #fff !important;
+}
+
+.banner{
+  background-image: url(https://images.unsplash.com/photo-1433800881591-a31e7bff3f22?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+}
