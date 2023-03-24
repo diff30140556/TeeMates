@@ -1,17 +1,72 @@
 [
   {
-    "name": "Sal",
-    "email": "sal@hotmail.com",
-    "password": "password12345"
+    "id": 1,
+    "user_name": "John Smith",
+    "email": "john_smith@example.com",
+    "password": "password1",
+    "handicap": 1
   },
   {
-    "name": "Lernantino",
-    "email": "lernantino@gmail.com",
-    "password": "password12345"
+    "id": 2,
+    "user_name": "Jane Johnson",
+    "email": "jane_johnson@example.com",
+    "password": "password2",
+    "handicap": 2
   },
   {
-    "name": "Amiko",
-    "email": "amiko2k20@aol.com",
-    "password": "password12345"
+    "id": 3,
+    "user_name": "Robert Lee",
+    "email": "robert_lee@example.com",
+    "password": "password3",
+    "handicap": 3
+  },
+  {
+    "id": 4,
+    "user_name": "Sarah Kim",
+    "email": "sarah_kim@example.com",
+    "password": "password4",
+    "handicap": 1
+  },
+  {
+    "id": 5,
+    "user_name": "Michael Chen",
+    "email": "michael_chen@example.com",
+    "password": "password5",
+    "handicap": 2
+  },
+  {
+    "id": 6,
+    "user_name": "Jessica Garcia",
+    "email": "jessica_garcia@example.com",
+    "password": "password6",
+    "handicap": 3
+  },
+  {
+    "id": 7,
+    "user_name": "David Patel",
+    "email": "david_patel@example.com",
+    "password": "password7",
+    "handicap": 1
+  },
+  {
+    "id": 8,
+    "user_name": "Emily Wong",
+    "email": "emily_wong@example.com",
+    "password": "password8",
+    "handicap": 2
+  },
+  {
+    "id": 9,
+    "user_name": "Daniel Rodriguez",
+    "email": "daniel_rodriguez@example.com",
+    "password": "password9",
+    "handicap": 3
+  },
+  {
+    "id": 10,
+    "user_name": "Avery Wilson",
+    "email": "avery_wilson@example.com",
+    "password": "password10",
+    "handicap": 1
   }
 ]

@@ -1,30 +1,32 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Project extends Model {}
+class TeeTime extends Model {}
 
-Project.init(
+TeeTime.init(
   {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
+      unique: true,
     },
-    name: {
+    course_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
-      type: DataTypes.STRING,
-    },
-    date_created: {
+    date: {
       type: DataTypes.DATE,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
+      // defaultValue: DataTypes.NOW,
     },
-    needed_funding: {
-      type: DataTypes.FLOAT,
+    time: {
+      type: DataTypes.TIME,
+      allowNull: false,
+    },
+    handicap: {
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     user_id: {
@@ -40,8 +42,8 @@ Project.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'project',
+    modelName: 'teetime',
   }
 );
 
-module.exports = Project;
+module.exports = TeeTime;

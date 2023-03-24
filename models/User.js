@@ -15,8 +15,9 @@ User.init(
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
+      unique: true
     },
-    name: {
+    user_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -34,6 +35,10 @@ User.init(
       validate: {
         len: [8],
       },
+    },
+    handicap: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
     },
   },
   {
