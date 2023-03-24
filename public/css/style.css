@@ -22,3 +22,27 @@ header, .project:not(:last-child) {
   font-weight: bold;
   margin-left: -5px;
 }
+
+.text-center{
+  text-align: center;
+}
+
+.d-block{
+  display: block;
+}
+
+.margin-auto{
+  margin: 0 auto;
+}
+
+.login-form{
+  width: 550px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px 60px;
+  border-radius: 10px;
+  color: #fff !important;
+}
+
+.banner{
+  
+}

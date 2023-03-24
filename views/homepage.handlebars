@@ -1,4 +1,4 @@
-<!-- Loop over each object in the projects array -->
+{{!-- <!-- Loop over each object in the projects array -->
 {{#each projects as |project| }}
 <div class="row mb-4 project">
   <div class="col-md-5">
@@ -21,4 +21,35 @@
     </p>
   </div>
 </div>
-{{/each}}
+{{/each}} --}}
+
+<div class="banner">
+  <div class="banner-content">
+    <h1 class="text-center">Tee Mates</h1>
+
+      <div class="row login-form">
+        <form class="col s12">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">email</i>
+              <input id="email" name="email" type="email" class="validate">
+              <label for="email">Email Address</label>
+            </div>
+
+            <div class="input-field col s12">
+              <i class="material-icons prefix">lock</i>
+              <input id="password" name="password" type="password" class="validate">
+              <label for="password">Password</label>
+            </div>
+
+            <p class="text-center">Don't have an account? <a href="">Register one now!</a></p>
+
+            <button class="btn waves-effect waves-light margin-auto d-block" type="submit" name="action">Log In
+              <i class="material-icons right">send</i>
+            </button>
+        </form>
+      </div>
+
+
+
+  </div>
+</div>
