@@ -1,8 +1,13 @@
 const router = require('express').Router();
 const userRoutes = require('./userRoutes');
-const projectRoutes = require('./projectRoutes');
+const teetimeRoutes = require('./teetimeRoutes');
+const createAccountRoutes = require('./createAccountRoutes');
+const submitTimesRoutes = require('./submitTimesRoutes');
 
-router.use('/users', userRoutes);
-router.use('/projects', projectRoutes);
+router.use('/userdash', userRoutes);
+router.use('/teetimes', teetimeRoutes);
+router.use('/createaccount', createAccountRoutes);
+router.use('/submit', submitTimesRoutes);
+
 
 module.exports = router;
