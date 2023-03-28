@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Op } = require("sequelize");
-const { TeeTime } = require('../../models');
+const { TeeTime, User } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
@@ -25,22 +25,31 @@ router.post('/', async (req, res) => {
 });
 
 router.get('/', async (req, res) => {
+  const data = await TeeTime.findAll()
+    // const results = data.map( (tee) => tee.get({plain: true}));
+    // console.log(results)
   // const data = await TeeTime.findAll()
   // const results = data.map( (tee) => tee.get({plain: true}));
   // console.log(results)
   res.render('userdash')
 })
 
-// router.get('/result', async (req, res) => {
-//   try{
-//     const data = await TeeTime.findAll()
-//     const results = data.map( (tee) => tee.get({plain: true}));
-//     console.log(results)
-//     res.render('userdash', {results})
+router.post('/result', async (req, res) => {
+  try{
+    const data = await TeeTime.findAll()
+    const results = data.map( (tee) => tee.get({plain: true}));
+    console.log(results)
+    // res.status(200).json(results)
 
-//   }catch (err) {
-//     console.log(err)
-//   }
-// })
+    res.redirect('userdash', {
+      results,
+      test: 'Hi'
+    })
+
+  }catch (err) {
+    console.log(err)
+  }
+})
+
 
 module.exports = router;

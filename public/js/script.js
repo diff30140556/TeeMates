@@ -1,6 +1,5 @@
+// initialize Typewriter 
 const app = document.querySelector('.loginTitle');
-//   cursor.style.width = '24px';
-//   cursor.style.height = '24px';
 
 const typewriter = new Typewriter(app, {
     loop: false,
@@ -31,28 +30,36 @@ document.addEventListener('DOMContentLoaded', function () {
     var instances = M.Datepicker.init(datepickerEl, {});
 });
 
-
+// userdash searching function
 const search = async (event) => {
+    // let jsondata;
     event.preventDefault();
     console.log('ss')
 
     const res = await fetch('/api/userdash/result', {
-        method: 'GET'
+        method: 'POST'
     });
-
     if (res.ok){
-        console.log('okay')
+        // jsondata = await res.json(); 
     }else{
         console.log('not okay')
     }
 
-}
-const test = async()=>{
-    console.log('yes')
+    // console.log(jsondata)
+
 }
 
 const btn = document.querySelector('.search-form');
 btn.addEventListener('submit', search);
 
-const btnss = document.querySelector('.searching-section');
-btnss.addEventListener('click', test);
+
+// root page log in button
+// const loginFormEl = document.querySelector('.loginForm');
+// loginFormEl.addEventListener('submit', login)
+
+// const login = async (e) => {
+//     e.preventDefault();
+
+
+
+// }
