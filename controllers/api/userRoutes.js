@@ -1,46 +1,42 @@
 const router = require('express').Router();
-const { Op } = require("sequelize");
-const { TeeTime } = require('../../models');
+const withAuth = require('../utils/auth');
+const { User } = require('../../models');
 
-router.post('/', async (req, res) => {
-  try {
-    const teetimeData = await TeeTime.findAll({
-      where: {
-        [Op.and]: [
-          { course_name: req.body.course_name },
-          { date: req.body.date }
-        ]
+router.post('/signup', async (req, res) => {
+    try {
+      const userData = await User.create({
+        username: req.body.username,
+        email: req.body.email,
+        password: req.body.password,
+      });
+      res.status(200).json(userData); // add res.render after 200?
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  });
+
+  router.post('/login', async (req, res) => {
+    try {
+      const userData = await User.findOne({ where: { email: req.body.email } });
+      if (!userData) {
+        res.status(404).json({ message: 'Login failed. Please try again!' });
+        return;
       }
-    });
+      const validPassword = await bcrypt.compare(
+        req.body.password,
+        userData.password
+      );
+      if (!validPassword) {
+        res.status(400).json({ message: 'Login failed. Please try again!' });
+        return;
+      }
+      res.redirect('/userdash', {
+        logged_in: req.session.logged_in,
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
 
-    const teetimes = teetimeData.map((teetime) => teetime.get({ plain: true }));
-
-    res.render('userdash', { 
-      teetimes, 
-      logged_in: req.session.logged_in 
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-router.get('/', async (req, res) => {
-  // const data = await TeeTime.findAll()
-  // const results = data.map( (tee) => tee.get({plain: true}));
-  // console.log(results)
-  res.render('userdash')
-})
-
-// router.get('/result', async (req, res) => {
-//   try{
-//     const data = await TeeTime.findAll()
-//     const results = data.map( (tee) => tee.get({plain: true}));
-//     console.log(results)
-//     res.render('userdash', {results})
-
-//   }catch (err) {
-//     console.log(err)
-//   }
-// })
 
 module.exports = router;
