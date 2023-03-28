@@ -41,7 +41,7 @@ router.post('/result', async (req, res) => {
     console.log(results)
     // res.status(200).json(results)
 
-    res.redirect('userdash', {
+    res.render('userdash', {
       results,
       test: 'Hi'
     })

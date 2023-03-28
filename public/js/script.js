@@ -41,6 +41,7 @@ const search = async (event) => {
     });
     if (res.ok){
         // jsondata = await res.json(); 
+        document.location.replace('/api/userdash')
     }else{
         console.log('not okay')
     }

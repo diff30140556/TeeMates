@@ -61,7 +61,7 @@
   <div class="result-section">
     <ul class="result-list row">
       {{test}}
-      {{!-- {{#if results}} --}}
+      {{#if results.length}}
       {{#each results as |result|}}
       {{!-- {{> homepage-details}} --}}
       <li class="result-card col s12 m6">
@@ -82,7 +82,7 @@
         </div>
       </li>
       {{/each}}
-      {{!-- {{/if}} --}}
+      {{/if}}
 
       {{!-- <li class="result-card col s12 m6">
         <div class="card glass-blur">
