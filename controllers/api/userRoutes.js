@@ -24,4 +24,23 @@ router.post('/', async (req, res) => {
   }
 });
 
+router.get('/', async (req, res) => {
+  // const data = await TeeTime.findAll()
+  // const results = data.map( (tee) => tee.get({plain: true}));
+  // console.log(results)
+  res.render('userdash')
+})
+
+// router.get('/result', async (req, res) => {
+//   try{
+//     const data = await TeeTime.findAll()
+//     const results = data.map( (tee) => tee.get({plain: true}));
+//     console.log(results)
+//     res.render('userdash', {results})
+
+//   }catch (err) {
+//     console.log(err)
+//   }
+// })
+
 module.exports = router;
