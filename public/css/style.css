@@ -1,5 +1,28 @@
-header, .project:not(:last-child) {
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+
+/* header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
+} */
+
+a:hover{
+  text-decoration: none;
+}
+
+body{
+  position: relative;
+}
+
+.wrap{
+  /* min-height: 100vh; */
+  overflow: hidden;
+  /* background: rgba(145, 145, 145, 0.648); */
+  background: url(https://images.unsplash.com/photo-1576220258822-153014832245?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1186&q=80) no-repeat center;
+  background-size: cover;
+}
+
+header{
+  z-index: 100;
 }
 
 .no-button {
@@ -23,10 +46,6 @@ header, .project:not(:last-child) {
   margin-left: -5px;
 }
 
-.text-center{
-  text-align: center;
-}
-
 .d-block{
   display: block;
 }
@@ -36,13 +55,172 @@ header, .project:not(:last-child) {
 }
 
 .login-form{
-  width: 550px;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 40px 60px;
+  padding: 10% 5%;
   border-radius: 10px;
   color: #fff !important;
 }
 
 .banner{
   background-image: url(https://images.unsplash.com/photo-1433800881591-a31e7bff3f22?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  justify-content: center;
+  padding: 0 25px;
+}
+
+.banner-content{
+  width: 650px;
+}
+
+.loginTitle{
+  margin-top: 0;
+  font-family: 'Rancho','Poppins', cursive;
+  font-size: clamp(4rem, 10vw, 7rem);
+  /* font-size: 5vw; */
+  word-spacing: 1rem;
+  letter-spacing: 0.4rem;
+}
+
+.banner-content form button{
+  font-size: 12px;
+  margin-top: 15px;
+}
+
+.banner-content form input{
+  color: #fff;
+  font-size: 18px !important;
+}
+
+/* input:-internal-autofill-selected{
+  background-color: transparent !important;
+} */
+
+
+.register-text{
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  margin: 20px 0 30px 0;
+}
+
+.register-text a:hover{
+  color: rgb(0, 215, 165);
+}
+
+.fixed{
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+nav{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.page-footer{
+  background-color: rgba(0, 0, 0, 0.6);
+  /* position: absolute; */
+  /* bottom: 0; */
+  /* width: 100%; */
+}
+
+.main-content{
+  margin-top: 80px;
+  min-height: calc(100vh - 80px)
+}
+
+.input-field{
+  margin: 0;
+}
+
+.main-content .btn{
+  background-color: rgb(0, 145, 202);
+}
+
+.main-content .row{
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.searching-section{
+  padding: 10px 0;
+  border-radius: 10px;
+  background: rgba(135, 135, 135, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 2px 3px 5px 0.5px rgb(134, 134, 134);
+}
+
+.glass-blur{
+  background: rgba(135, 135, 135, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 2px 3px 5px 0.5px rgb(134, 134, 134);
+  backdrop-filter: blur(5px);
+}
+
+.datepicker::placeholder{
+  color: rgb(134, 134, 134);
+}
+
+.divide-line{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  /* position: absolute; */
+  width: 100%;
+  transform: scaleX(1.2);
+  margin: 30px 0;
+  position: relative;
+}
+
+.divide-line::after{
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  left: 50%;
+  top: 1px;
+  transform: translateX(-50%);
+}
+
+.result-list{
+  justify-content: center;
+}
+
+.result-list li{
+  margin-left: 0 !important;
+}
+
+.card .card-action{
+  padding: 0;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating){
+  margin-right: 0;
+  display: block;
+  padding: 15px 0;
+  transition: 0.15s ease-in-out;
+  color: rgb(247, 111, 38);
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover{
+  color: rgb(233, 58, 58) ;
+  font-weight: 600;
+  transform: scale(1.1);
+}
+
+.card{
+  border-radius: 15px;
+  overflow: hidden;
+  border-right: 1px solid rgba(130, 130, 130, 0.5);
+  border-bottom: 1px solid rgba(130, 130, 130, 0.5);
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: none;
+}
+
+.custom-text{
+  display: flex;
+  justify-content: space-between;
 }
