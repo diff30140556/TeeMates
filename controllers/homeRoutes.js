@@ -31,7 +31,16 @@ router.get('/submit',withAuth, async (req, res) => {
 
 router.get('/userdash',withAuth, async (req, res) => {
   try {
-    res.render('userdash',{
+    // res.render('userdash',{
+    //   logged_in: req.session.logged_in
+    // });
+    const teetimeData = await TeeTime.findAll();
+
+    const teetimes = teetimeData.map((teetime) => teetime.get({ plain: true }));
+    console.log(teetimes);
+    res.render('userdash', {
+      // need to update to handlebar filename for partial/cards with search results
+      teetimes,
       logged_in: req.session.logged_in
     });
   } catch (err) {
