@@ -36,10 +36,10 @@ User.init(
         len: [8],
       },
     },
-    handicap: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
+    // handicap: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    // },
   },
   {
     hooks: {

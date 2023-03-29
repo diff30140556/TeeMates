@@ -23,16 +23,14 @@ document.addEventListener('DOMContentLoaded', function () {
     var selectEl = document.querySelectorAll('select');
     var instances = M.FormSelect.init(selectEl, {});
 });
-
 // initialize date picker
+const datepickerEl = document.querySelector('.datepicker');
 document.addEventListener('DOMContentLoaded', function () {
-    var datepickerEl = document.querySelectorAll('.datepicker');
     var instances = M.Datepicker.init(datepickerEl, {});
 });
 
 // userdash searching function
 const search = async (event) => {
-    // let jsondata;
     event.preventDefault();
     console.log('ss')
 
@@ -40,14 +38,10 @@ const search = async (event) => {
         method: 'POST'
     });
     if (res.ok){
-        // jsondata = await res.json(); 
-        // document.location.replace('/api/userdash')
+        console.log('okay')
     }else{
         console.log('not okay')
     }
-
-    // console.log(jsondata)
-
 }
 
 const btn = document.querySelector('.search-form');

@@ -19,23 +19,27 @@ router.get('/signup', async (req, res) => {
   }
 });
 
-router.get('/submit', async (req, res) => {
+router.get('/submit',withAuth, async (req, res) => {
   try {
-    res.render('submit');
+    res.render('submit',{
+      logged_in: req.session.logged_in
+    });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.get('/userdash', async (req, res) => {
+router.get('/userdash',withAuth, async (req, res) => {
   try {
-    res.render('userdash');
+    res.render('userdash',{
+      logged_in: req.session.logged_in
+    });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.get('/teetimes', async (req, res) => {
+router.get('/teetimes',withAuth, async (req, res) => {
   try {
     const id = req.params.id
     const confirmedTeetimes = await TeeTime.findAll({
