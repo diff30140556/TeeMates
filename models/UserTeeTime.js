@@ -18,7 +18,7 @@ UserTeeTime.init(
       references: {
         model: 'user',
         key: 'id',
-        unique: false,
+        // unique: false,
       },
     },
     teetime_id: {
@@ -27,7 +27,7 @@ UserTeeTime.init(
       references: {
         model: 'teetime',
         key: 'id',
-        unique: false,
+        // unique: false,
       },
     },
     // user_name: {
