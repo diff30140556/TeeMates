@@ -3,23 +3,27 @@ const withAuth = require('../../utils/auth');
 const { User } = require('../../models');
 
 router.post('/signup', async (req, res) => {
-  try {
-    console.log(req.body)
-    const userData = await User.create({
-      user_name: req.body.username,
-      email: req.body.email,
-      password: req.body.password,
-    });
-    console.log('userData')
-    res.status(200).json(userData); // add res.render after 200?
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
+    try {
+      // Remove console.log -- used for debugging      
+      console.log(req.body)
+      const userData = await User.create(req.body);
+      res.status(200).json(userData); 
+      // res.redirect('/');
+      // res.redirect('/homepage', {
+      //   logged_in: !req.session.logged_in,
+      // });// add res.render after 200?
+    } catch (err) {
+      // Remove console.log -- used for debugging
+      console.log(err) 
+      res.status(400).json(err);
+    }
+  });
+
+ 
+
 
 router.post('/login', async (req, res) => {
   try {
-    console.log(req.baseUrl)
     const userData = await User.findOne({ where: { email: req.body.email } });
     if (!userData) {
       res.status(404).json({ message: 'Login failed. Please try again!' });
@@ -35,7 +39,7 @@ router.post('/login', async (req, res) => {
     //   logged_in: req.session.logged_in,
     // });
     req.session.logged_in = true;
-    res.status(200).json('success');
+    res.status(200).json({ user: userData, message: 'You are now logged in!' });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -51,6 +55,5 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
-
 
 module.exports = router;

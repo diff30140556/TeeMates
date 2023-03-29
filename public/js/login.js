@@ -1,4 +1,5 @@
 const loginFormHandler = async (event) => {
+  alert("login handler");
   event.preventDefault();
   console.log('ss')
   // Collect values from the login form
@@ -26,15 +27,16 @@ const loginFormHandler = async (event) => {
 
 const signupFormHandler = async (event) => {
   event.preventDefault();
-
-  const name = document.querySelector('#name-signup').value.trim();
+  
+  // Collect values from the signup form
+  const username = document.querySelector('#name-signup').value.trim();
   const email = document.querySelector('#email-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
 
-  if (name && email && password) {
-    const response = await fetch('/api/users', {
+  if (username && email && password) {
+    const response = await fetch('/api/user/signup', {
       method: 'POST',
-      body: JSON.stringify({ name, email, password }),
+      body: JSON.stringify({ user_name: username, email, password }),
       headers: { 'Content-Type': 'application/json' },
     });
 
