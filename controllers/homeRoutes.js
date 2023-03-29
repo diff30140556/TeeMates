@@ -49,34 +49,11 @@ router.get('/teetimes',withAuth, async (req, res) => {
       myteetimes.get({ plain: true })
     );
 
-    // res.render('myteetimes', {
-    //   myteetimes,
-    //   logged_in: req.session.logged_in,
-    // });
-    res.status(200).json(myteetimes)
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-router.post('/userdash', async (req, res) => {
-  try {
-    // const teetimeData = await TeeTime.findAll({
-    //   where: {
-    //     [Op.and]: [
-    //       { course_name: req.body.course_name },
-    //       { date: req.body.date },
-    //     ],
-    //   },
-    // });
-    const teetimeData = await TeeTime.findAll();
-
-    const teetimes = teetimeData.map((teetime) => teetime.get({ plain: true }));
-    console.log(teetimes);
-    res.render('userdash', {
-      // need to update to handlebar filename for partial/cards with search results
-      teetimes
+    res.render('myteetimes', {
+      myteetimes,
+      logged_in: req.session.logged_in,
     });
+    // res.status(200).json(myteetimes)
   } catch (err) {
     res.status(500).json(err);
   }
