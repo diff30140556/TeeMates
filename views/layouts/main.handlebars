@@ -16,33 +16,29 @@
 <body>
   <div class="wrap">
 
-    {{!-- {{#if logged_in}} --}}
+    {{#if logged_in}}
     <header class="fixed">
       <nav>
         <div class="nav-wrapper">
-          <a href="#!" class="brand-logo">Tee Mates</a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <a href="/userdash" class="brand-logo">Tee Mates</a>
+          <a href="/userdash" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
-            <li><a href="#">Submit Tee Time</a></li>
-            <li><a href="#">My Tee Time</a></li>
+            <li><a href="/submit">Submit Tee Time</a></li>
+            <li><a href="/teetimes">My Tee Time</a></li>
 
-            {{#if logged_in}}
-            <li><a href="#">Log Out</a></li>
-            {{else}}
-            <li><a href="#">Log In</a></li>
-            {{/if}}
+            <li><a href="#" id="logout">Log Out</a></li>
 
           </ul>
         </div>
       </nav>
 
       <ul class="sidenav" id="mobile-demo">
-        <li><a href="#">Submit Tee Time</a></li>
-        <li><a href="#">My Tee Time</a></li>
-        <li><a href="#">Log Out</a></li>
+        <li><a href="/submit">Submit Tee Time</a></li>
+        <li><a href="/teetimes">My Tee Time</a></li>
+        <li><a href="#" id="logout">Log Out</a></li>
       </ul>
     </header>
-    {{!-- {{/if}} --}}
+    {{/if}}
 
     <main>
       <!-- Render the sub layout -->
@@ -89,6 +85,7 @@
 
   <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
   <script src="/js/script.js"></script>
+  
 </body>
 
 </html>

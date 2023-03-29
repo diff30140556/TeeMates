@@ -29,22 +29,30 @@ router.post('/login', async (req, res) => {
       res.status(404).json({ message: 'Login failed. Please try again!' });
       return;
     }
-    const validPassword = await bcrypt.compare(
-      req.body.password,
-      userData.password
-    );
+    const validPassword = await userData.checkPassword(req.body.password);
     if (!validPassword) {
+      console.log('passsssssssssssssssssss')
       res.status(400).json({ message: 'Login failed. Please try again!' });
       return;
     }
-    req.session.save(() => {
-      req.session.user_id = userData.id;
-      req.session.logged_in = true;
-
-      res.json({ user: userData, message: 'You are now logged in!' });
-    });
+    // res.redirect('/userdash', {
+    //   logged_in: req.session.logged_in,
+    // });
+    req.session.logged_in = true;
+    res.status(200).json({ user: userData, message: 'You are now logged in!' });
   } catch (err) {
     res.status(500).json(err);
+  }
+});
+
+
+router.post('/logout', (req, res) => {
+  if (req.session.logged_in) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
   }
 });
 
