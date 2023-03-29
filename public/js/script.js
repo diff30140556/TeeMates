@@ -15,14 +15,14 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // initialize selection menu
+const selectEl = document.querySelectorAll('select');
 document.addEventListener('DOMContentLoaded', function () {
-  var selectEl = document.querySelectorAll('select');
-  var instances = M.FormSelect.init(selectEl, {});
+  const instances = M.FormSelect.init(selectEl, {});
 });
+
 // initialize date picker
 const datepickerEl = document.querySelector('.datepicker');
 document.addEventListener('DOMContentLoaded', function () {
-  var datepickerEl = document.querySelectorAll('.datepicker');
   M.Datepicker.init(datepickerEl, {
     format: 'yyyy-mm-dd',
     autoClose: true,
@@ -30,31 +30,11 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-const search = async (event) => {
-  event.preventDefault();
-  console.log('ss');
-
-    const res = await fetch('/userdash', {
-        method: 'POST'
-    });
-    if (res.ok){
-        console.log('okay')
-    }else{
-        console.log('not okay')
-    }
-}
-
-const btn = document.querySelector('.search-form');
-btn.addEventListener('submit', search);
-
-
-// root page log in button
-// const loginFormEl = document.querySelector('.loginForm');
-// loginFormEl.addEventListener('submit', login)
-
-// const login = async (e) => {
-//     e.preventDefault();
-
-
-
-// }
+// initialize time picker
+const timepickerEl = document.querySelector('.timepicker');
+document.addEventListener('DOMContentLoaded', function () {
+  M.Timepicker.init(timepickerEl, {
+    twelveHour: false,
+    format: 'HH:mm:ss',
+  });
+});
