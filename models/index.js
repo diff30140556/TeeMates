@@ -16,7 +16,7 @@ TeeTime.belongsToMany(User, {
     model: UserTeeTime,
     unique: false
   },
-  // as: 'teetime_user'
+  as: 'teetime_user'
 })
 
 module.exports = { User, TeeTime, UserTeeTime };

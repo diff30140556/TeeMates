@@ -36,12 +36,12 @@ const search = async (event) => {
     event.preventDefault();
     console.log('ss')
 
-    const res = await fetch('/api/userdash/result', {
+    const res = await fetch('/userdash', {
         method: 'POST'
     });
     if (res.ok){
         // jsondata = await res.json(); 
-        document.location.replace('/api/userdash')
+        // document.location.replace('/api/userdash')
     }else{
         console.log('not okay')
     }

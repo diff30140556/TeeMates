@@ -61,10 +61,10 @@
   <div class="result-section">
     <ul class="result-list row">
       {{test}}
-      {{#if results.length}}
-      {{#each results as |result|}}
-      {{!-- {{> homepage-details}} --}}
-      <li class="result-card col s12 m6">
+      {{!-- {{#if results.length}} --}}
+      {{#each teetimes }}
+      {{> homepagedetails}}
+      {{!-- <li class="result-card col s12 m6">
         <div class="card glass-blur">
           <div class="card-content">
             <span class="card-title">Course: {{result.courese_name}}</span>
@@ -80,9 +80,9 @@
             <a href="#">Attend Tee Time</a>
           </div>
         </div>
-      </li>
+      </li> --}}
       {{/each}}
-      {{/if}}
+      {{!-- {{/if}} --}}
 
       {{!-- <li class="result-card col s12 m6">
         <div class="card glass-blur">
