@@ -11,7 +11,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 const PORT = process.env.PORT || 7777;
 
-const hbs = exphbs.create({  });
+const hbs = exphbs.create({});
 
 const sess = {
   secret: 'Super secret secret',
@@ -24,8 +24,8 @@ const sess = {
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
-    db: sequelize
-  })
+    db: sequelize,
+  }),
 };
 
 app.use(session(sess));

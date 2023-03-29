@@ -3,7 +3,7 @@
     <form class="submit">
       <div class="row">
 
-        <div class="input-field col s12 m6">
+        <div class="input-field col s12 m6 course">
           <select>
             <option value="" disabled selected>Select the course</option>
             <option value="Augusta National">Augusta National</option>
@@ -14,7 +14,7 @@
             <option value="Winged Foot Golf Club ">Winged Foot Golf Club </option>
           </select>
         </div>
-        <div class="input-field col s12 m6">
+        <div class="input-field col s12 m6 handicap">
           <select>
             <option value="" disabled selected>Select handicap</option>
             <option value="20+">20+</option>
@@ -23,12 +23,14 @@
           </select>
         </div>
 
-        <input type="text" class="datepicker col s6 m3" placeholder="Choose date">
-        <input type="text" class="timepicker col s6 m3" placeholder="Choose time">
+        <input type="text" class="datepicker col s6 m3" id="date" placeholder="Choose date">
+        <input type="text" class="timepicker col s6 m3" id="time" placeholder="Choose time">
 
-        <button class="btn waves-effect waves-light margin-auto d-block col" type="submit" name="action">Search
+        <button class="btn waves-effect waves-light margin-auto d-block col" type="submit" name="action">Submit
           <i class="material-icons right">submit</i>
         </button>
       </div>
     </form>
   </div>
+
+  <script src="/js/submit.js"></script>
