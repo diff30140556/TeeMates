@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { User, TeeTime, UserTeeTime } = require('../models');
 const withAuth = require('../utils/auth');
-const bcrypt = require('bcrypt');
 
 router.get('/', async (req, res) => {
   try {
@@ -19,41 +18,48 @@ router.get('/signup', async (req, res) => {
   }
 });
 
-router.get('/submit',withAuth, async (req, res) => {
+router.get('/submit', withAuth, async (req, res) => {
   try {
-    res.render('submit',{
-      logged_in: req.session.logged_in
+    res.render('submit', {
+      logged_in: req.session.logged_in,
+      inSubmit: true
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.get('/userdash',withAuth, async (req, res) => {
-  try {
-    res.render('userdash',{
-      logged_in: req.session.logged_in
+router.get('/userdash', withAuth, async (req, res) => {
+  try {    
+    res.render('userdash', {
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.get('/teetimes',withAuth, async (req, res) => {
+router.get('/teetimes', withAuth, async (req, res) => {
   try {
-    const id = req.params.id
+    const user_id = req.session.user_id;
     const confirmedTeetimes = await TeeTime.findAll({
-      include: [{ model: User, through: UserTeeTime, as: 'teetime_user' }],
+      include: [
+        {
+          model: User,
+          through: UserTeeTime,
+          as: 'teetime_user',
+          where: { id: user_id },
+        }],
     });
     const myteetimes = confirmedTeetimes.map((myteetimes) =>
       myteetimes.get({ plain: true })
     );
+    console.log(myteetimes)
 
     res.render('myteetimes', {
       myteetimes,
-      logged_in: req.session.logged_in,
+      logged_in: req.session.logged_in
     });
-    // res.status(200).json(myteetimes)
   } catch (err) {
     res.status(500).json(err);
   }

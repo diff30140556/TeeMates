@@ -19,7 +19,6 @@ TeeTime.init(
     date: {
       type: DataTypes.DATE,
       allowNull: false,
-      // defaultValue: DataTypes.NOW,
     },
     time: {
       type: DataTypes.TIME,

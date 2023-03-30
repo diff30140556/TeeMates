@@ -1,12 +1,25 @@
 const router = require('express').Router();
 const withAuth = require('../../utils/auth');
-const { TeeTime } = require('../../models');
+const { TeeTime, UserTeeTime } = require('../../models');
 
 router.post('/', withAuth, async (req, res) => {
   try {
-    const teeTime = await TeeTime.create(req.body);
-    console.log(teeTime)
-    res.status(200).json(teeTime);
+    const user_id = req.session.user_id;
+    console.log(req.body)
+    const teeTime = await TeeTime.create({
+      course_name: req.body.course_name,
+      date: req.body.date,
+      time: req.body.time,
+      handicap: req.body.handicap,
+      user_id
+    });
+    const teetime_id = teeTime.id;
+    console.log(teetime_id);
+    await UserTeeTime.create({
+      user_id,
+      teetime_id
+    })
+    res.status(200).json();
   } catch (err) {
     res.status(400).json(err);
   }

@@ -2,127 +2,71 @@
   {
     "id": 1,
     "user_id": 2,
-    "teetime_id": 2,
-    "handicap": 3,
-    "course_name": "Augusta National",
-    "date": "2023-04-02",
-    "time": "14:00"
+    "teetime_id": 2
   },
   {
     "id": 2,
     "user_id": 4,
-    "teetime_id": 6,
-    "handicap": 1,
-    "course_name": "Merion Golf Club",
-    "date": "2023-04-06",
-    "time": "10:00"
+    "teetime_id": 6
   },
   {
     "id": 3,
     "user_id": 6,
-    "teetime_id": 2,
-    "handicap": 3,
-    "course_name": "Augusta National",
-    "date": "2023-04-02",
-    "time": "14:00"
+    "teetime_id": 2
   },
   {
     "id": 4,
     "user_id": 1,
-    "teetime_id": 2,
-    "handicap": 3,
-    "course_name": "Augusta National",
-    "date": "2023-04-02",
-    "time": "14:00"
+    "teetime_id": 2
   },
   {
     "id": 5,
     "user_id": 9,
-    "teetime_id": 6,
-    "handicap": 1,
-    "course_name": "Merion Golf Club",
-    "date": "2023-04-06",
-    "time": "10:00"
+    "teetime_id": 6
   },
   {
     "id": 6,
     "user_id": 1,
-    "teetime_id": 1,
-    "handicap": 2,
-    "course_name": "Pine Valley",
-    "date": "2023-04-01",
-    "time": "10:00"
+    "teetime_id": 1
   },
   {
     "id": 7,
     "user_id": 3,
-    "teetime_id": 3,
-    "handicap": 1,
-    "course_name": "Cypress Point Club",
-    "date": "2023-04-03",
-    "time": "09:00"
+    "teetime_id": 3
   },
   {
     "id": 8,
     "user_id": 7,
-    "teetime_id": 3,
-    "handicap": 1,
-    "course_name": "Cypress Point Club",
-    "date": "2023-04-03",
-    "time": "09:00"
+    "teetime_id": 3
   },
   {
     "id": 9,
     "user_id": 4,
-    "teetime_id": 4,
-    "handicap": 2,
-    "course_name": "Shinnecock Hills Golf Club",
-    "date": "2023-04-04",
-    "time": "11:00"
+    "teetime_id": 4
   },
   {
     "id": 10,
     "user_id": 5,
-    "teetime_id": 5,
-    "handicap": 2,
-    "course_name": "Augusta National",
-    "date": "2023-04-05",
-    "time": "08:00"
+    "teetime_id": 5
   },
   {
     "id": 11,
     "user_id": 7,
-    "teetime_id": 7,
-    "handicap": 2,
-    "course_name": "Winged Foot Golf Club",
-    "date": "2023-04-07",
-    "time": "11:00"
+    "teetime_id": 7
   },
   {
     "id": 12,
     "user_id": 10,
-    "teetime_id": 7,
-    "handicap": 2,
-    "course_name": "Winged Foot Golf Club",
-    "date": "2023-04-07",
-    "time": "11:00"
+    "teetime_id": 7
   },
   {
     "id": 13,
     "user_id": 9,
-    "teetime_id": 5,
-    "handicap": 2,
-    "course_name": "Augusta National",
-    "date": "2023-04-05",
-    "time": "08:00"
+    "teetime_id": 5
   },
   {
     "id": 14,
     "user_id": 8,
-    "teetime_id": 5,
-    "handicap": 2,
-    "course_name": "Augusta National",
-    "date": "2023-04-05",
-    "time": "08:00"
+    "teetime_id": 5
   }
 ]

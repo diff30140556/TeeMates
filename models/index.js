@@ -8,7 +8,7 @@ User.belongsToMany(TeeTime, {
     model: UserTeeTime,
     unique: false
   },
-  // as: 'planned_teatime'
+  as: 'planned_teatime'
 })
 
 TeeTime.belongsToMany(User, {
