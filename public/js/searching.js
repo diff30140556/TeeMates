@@ -18,7 +18,7 @@ const search = async (event) => {
             let list = ``;
             results.map((result) => {
                 const resultDate = new Date(result.date);
-                const formattedDate = resultDate.toLocaleDateString();
+                const formattedDate = resultDate.toISOString().substring(0, 10);
                 list += `
                 <li class="result-card col s12 m6">
                     <div class="card glass-blur">

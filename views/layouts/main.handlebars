@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TeeMates!</title>
+  <link rel="icon" href="https://i.imgur.com/fI0m9kZ.png">  
+  <link rel="short icon" href="https://i.imgur.com/fI0m9kZ.png">
   <link rel="stylesheet" href="/css/jass.css">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -23,11 +25,8 @@
           <a href="/userdash" class="logo brand-logo">Tee Mates</a>
           <a href="/userdash" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
-            {{#if inSubmit}}
             <li><a href="/userdash">User Dash</a></li>
-            {{else}}
             <li><a href="/submit">Submit Tee Time</a></li>
-            {{/if}}
             <li><a href="/teetimes">My Tee Time</a></li>
 
             <li><a href="#" id="logout">Log Out</a></li>
@@ -37,6 +36,7 @@
       </nav>
 
       <ul class="sidenav" id="mobile-demo">
+        <li><a href="/userdash">User Dash</a></li>
         <li><a href="/submit">Submit Tee Time</a></li>
         <li><a href="/teetimes">My Tee Time</a></li>
         <li><a href="#" id="logout">Log Out</a></li>
