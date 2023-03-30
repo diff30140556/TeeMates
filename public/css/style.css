@@ -54,10 +54,14 @@ header{
   margin: 0 auto;
 }
 
+.form-header{
+  margin: 0px auto 75px;
+}
+
 .login-form{
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 10% 5%;
+  padding: 5% 5%;
   border-radius: 10px;
   color: #fff !important;
 }
@@ -116,6 +120,7 @@ header{
 
 nav{
   background-color: rgba(0, 0, 0, 0.5);
+  padding-left: 30px;
 }
 
 .page-footer{
@@ -225,10 +230,8 @@ nav{
   justify-content: space-between;
 }
 
-.banner-create{
-  /* background: no-repeat center; */
+.bground-signup{
   background-image: url(https://images.unsplash.com/photo-1591491653056-4313c0e2f379?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
-  /* background-size: cover; */
   overflow: hidden;
   background-size: cover;
   background-position: center;
@@ -239,4 +242,10 @@ nav{
 
 .create-account-header{
   color: #fff;
+}
+
+.logo {
+  font-family: 'Rancho','Poppins', cursive;
+  font-size: clamp(4rem, 10vw, 7rem);
+  letter-spacing: 0.4rem;
 }
