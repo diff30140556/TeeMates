@@ -22,7 +22,6 @@ router.get('/submit', withAuth, async (req, res) => {
   try {
     res.render('submit', {
       logged_in: req.session.logged_in,
-      inSubmit: true
     });
   } catch (err) {
     res.status(500).json(err);

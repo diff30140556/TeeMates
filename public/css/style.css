@@ -17,7 +17,7 @@ body{
   /* min-height: 100vh; */
   overflow: hidden;
   /* background: rgba(145, 145, 145, 0.648); */
-  background: url(https://images.unsplash.com/photo-1576220258822-153014832245?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1186&q=80) no-repeat center;
+  background: url(https://i.imgur.com/MJzWTtP.jpg) no-repeat center;
   background-size: cover;
 }
 
@@ -67,7 +67,7 @@ header{
 }
 
 .banner{
-  background-image: url(https://images.unsplash.com/photo-1433800881591-a31e7bff3f22?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+  background-image: url(https://i.imgur.com/TGAr7e9.jpg);
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -233,7 +233,7 @@ nav{
 }
 
 .bground-signup{
-  background-image: url(https://images.unsplash.com/photo-1591491653056-4313c0e2f379?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
+  background-image: url(https://i.imgur.com/ZljwjlX.jpg);
   overflow: hidden;
   background-size: cover;
   background-position: center;

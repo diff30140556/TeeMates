@@ -4,7 +4,7 @@
 
   ## Description
   
-  This app is designed to give golfers the ability to find and pair with golfers of similar skill levels. Users can submit tee times to invite other golfers to join, as well as, join tee times that have been posted by others in the community. This also provides an easy and convenient way to track all your scheduled tee times in one  place.
+  This app is designed to give golfers the ability to find and pair with golfers of similar skill levels. Users can submit tee times to invite other golfers to join, as well as, join tee times that have been posted by others in the community. This also provides an easy and convenient way to track all your scheduled tee times in one place.
   
   ## Table of Contents
   

@@ -1,9 +1,6 @@
 const logout = async (e) => {
   e.preventDefault();
   
-  console.log(e)
-  console.log(e.target)
-  console.log('hey')
   const response = await fetch('/api/user/logout', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -16,4 +13,5 @@ const logout = async (e) => {
   }
 };
 
-document.querySelector('#logout').addEventListener('click', logout);
+document.querySelector('nav #logout').addEventListener('click', logout);
+document.querySelector('.sidenav #logout').addEventListener('click', logout);
