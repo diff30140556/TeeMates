@@ -38,7 +38,6 @@ User.init(
     },
     handicap: {
       type: DataTypes.INTEGER,
-      // allowNull: false,
     },
   },
   {

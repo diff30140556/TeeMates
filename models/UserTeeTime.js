@@ -18,7 +18,7 @@ UserTeeTime.init(
       references: {
         model: 'user',
         key: 'id',
-        // unique: false,
+        unique: false,
       },
     },
     teetime_id: {
@@ -27,30 +27,9 @@ UserTeeTime.init(
       references: {
         model: 'teetime',
         key: 'id',
-        // unique: false,
+        unique: false,
       },
-    },
-    // user_name: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    // },
-    handicap: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    course_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    date: {
-      type: DataTypes.DATE,
-      allowNull: null,
-      // defaultValue: DataTypes.NOW,
-    },
-    time: {
-      type: DataTypes.TIME,
-      allowNull: false,
-    },
+    }
   },
   {
     sequelize,

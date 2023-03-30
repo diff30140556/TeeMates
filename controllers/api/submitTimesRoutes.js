@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const withAuth = require('../../utils/auth');
-const { TeeTime } = require('../../models');
+const { TeeTime, UserTeeTime } = require('../../models');
 
 router.post('/', withAuth, async (req, res) => {
   try {
@@ -12,8 +12,13 @@ router.post('/', withAuth, async (req, res) => {
       handicap: req.body.handicap,
       user_id
     });
-    console.log(teeTime)
-    res.status(200).json(teeTime);
+    const teetime_id = teeTime.id;
+    console.log(teetime_id);
+    await UserTeeTime.create({
+      user_id,
+      teetime_id
+    })
+    res.status(200).json();
   } catch (err) {
     res.status(400).json(err);
   }

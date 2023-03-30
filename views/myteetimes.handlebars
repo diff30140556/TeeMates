@@ -1,45 +1,13 @@
-{{!-- <div class="banner">
-
-  <div class="banner-content">
-    <h1 class="text-center loginTitle text-white"></h1>
-    <div class="row login-form">
-      <form class="col s12">
-        <div class="input-field col s12">
-          <i class="material-icons prefix">email</i>
-          <input id="email" name="email" type="email" class="validate">
-          <label for="email">Email Address</label>
-        </div>
-
-        <div class="input-field col s12">
-          <i class="material-icons prefix">lock</i>
-          <input id="password" name="password" type="password" class="validate">
-          <label for="password">Password</label>
-        </div>
-
-        <div class="col s12">
-          <p class="text-center register-text">Don't have an account? <a href="">Register one now!</a></p>
-        </div>
-        <button class="btn waves-effect waves-light margin-auto d-block" type="submit" name="action">Log In
-          <i class="material-icons right">send</i>
-        </button>
-      </form>
-    </div>
-
-
-
-  </div>
-</div> --}}
-
 <div class="container main-content">
-  <h2 class="margin-auto">My Tee Times</h2>
+  <h2 class="margin-auto text-center">My Tee Times</h2>
   <div class="divide-line"></div>
 
   <div class="result-section">
     <ul class="result-list row">
 
-      {{!-- {{#if results}} --}}
-      {{#each results as |result|}}
-      <li class="result-card col s12 m6">
+      {{#each myteetimes }}
+      {{> myteetimeDetails}}
+      {{!-- <li class="result-card col s12 m6">
         <div class="card glass-blur">
           <div class="card-content">
             <span class="card-title">Course: {{result.courese_name}}</span>
@@ -52,102 +20,11 @@
             </div>
           </div>
           <div class="card-action text-center">
-            <a href="#">Attend Tee Time</a>
-          </div>
-        </div>
-      </li>
-      {{/each}}
-      {{!-- {{/if}} --}}
-
-      {{!-- <li class="result-card col s12 m6">
-        <div class="card glass-blur">
-          <div class="card-content">
-            <span class="card-title">Course: Banana</span>
-            <p>Tee Date: 03/30/23</p>
-            <p>Tee Time: 2:00 PM</p>
-            <p>Person: 3</p>
-            <div class="custom-text">
-              <p>Handicap: Expert</p>
-              <p>Posted By: Nick</p>
-            </div>
-          </div>
-          <div class="card-action text-center">
-            <a href="#">Attend Tee Time</a>
-          </div>
-        </div>
-      </li>
-
-      <li class="result-card col s12 m6">
-        <div class="card glass-blur">
-          <div class="card-content">
-            <span class="card-title">Course: Banana</span>
-            <p>Tee Date: 03/30/23</p>
-            <p>Tee Time: 2:00 PM</p>
-            <p>Person: 3</p>
-            <div class="custom-text">
-              <p>Handicap: Expert</p>
-              <p>Posted By: Nick</p>
-            </div>
-          </div>
-          <div class="card-action text-center">
-            <a href="#">Attend Tee Time</a>
-          </div>
-        </div>
-      </li>
-
-      <li class="result-card col s12 m6">
-        <div class="card glass-blur">
-          <div class="card-content">
-            <span class="card-title">Course: Banana</span>
-            <p>Tee Date: 03/30/23</p>
-            <p>Tee Time: 2:00 PM</p>
-            <p>Person: 3</p>
-            <div class="custom-text">
-              <p>Handicap: Expert</p>
-              <p>Posted By: Nick</p>
-            </div>
-          </div>
-          <div class="card-action text-center">
-            <a href="#">Attend Tee Time</a>
-          </div>
-        </div>
-      </li>
-
-      <li class="result-card col s12 m6">
-        <div class="card glass-blur">
-          <div class="card-content">
-            <span class="card-title">Course: Banana</span>
-            <p>Tee Date: 03/30/23</p>
-            <p>Tee Time: 2:00 PM</p>
-            <p>Person: 3</p>
-            <div class="custom-text">
-              <p>Handicap: Expert</p>
-              <p>Posted By: Nick</p>
-            </div>
-          </div>
-          <div class="card-action text-center">
-            <a href="#">Attend Tee Time</a>
-          </div>
-        </div>
-      </li>
-
-      <li class="result-card col s12 m6">
-        <div class="card glass-blur">
-          <div class="card-content">
-            <span class="card-title">Course: Banana</span>
-            <p>Tee Date: 03/30/23</p>
-            <p>Tee Time: 2:00 PM</p>
-            <p>Person: 3</p>
-            <div class="custom-text">
-              <p>Handicap: Expert</p>
-              <p>Posted By: Nick</p>
-            </div>
-          </div>
-          <div class="card-action text-center">
-            <a href="#">Attend Tee Time</a>
+            <a href="">Delete Tee Time</a>
           </div>
         </div>
       </li> --}}
+      {{/each}}
 
     </ul>
   </div>

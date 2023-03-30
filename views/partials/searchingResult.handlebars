@@ -4,14 +4,13 @@
             <span class="card-title">Course: {{course_name}}</span>
             <p>Tee Date: {{format_date date}}</p>
             <p>Tee Time: {{ time}}</p>
-            <p>Person: 3</p>
             <div class="custom-text">
                 <p>Handicap: {{handicap}}</p>
                 <p>Posted By: {{user_id}}</p>
             </div>
         </div>
         <div class="card-action text-center">
-            <a href="#">Attend Tee Time</a>
+            <a href="" class="attend-btn" data-teetimeid="{{id}}">Attend Tee Time</a>
         </div>
     </div>
 </li>

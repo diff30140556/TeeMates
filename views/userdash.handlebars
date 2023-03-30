@@ -1,41 +1,9 @@
-{{!-- <div class="banner">
-
-  <div class="banner-content">
-    <h1 class="text-center loginTitle text-white"></h1>
-    <div class="row login-form">
-      <form class="col s12">
-        <div class="input-field col s12">
-          <i class="material-icons prefix">email</i>
-          <input id="email" name="email" type="email" class="validate">
-          <label for="email">Email Address</label>
-        </div>
-
-        <div class="input-field col s12">
-          <i class="material-icons prefix">lock</i>
-          <input id="password" name="password" type="password" class="validate">
-          <label for="password">Password</label>
-        </div>
-
-        <div class="col s12">
-          <p class="text-center register-text">Don't have an account? <a href="">Register one now!</a></p>
-        </div>
-        <button class="btn waves-effect waves-light margin-auto d-block" type="submit" name="action">Log In
-          <i class="material-icons right">send</i>
-        </button>
-      </form>
-    </div>
-
-
-
-  </div>
-</div> --}}
-
 <div class="container main-content">
   <div class="searching-section">
     <form class="searching-bar search-form">
       <div class="row">
 
-        <div class="input-field col s12 m6">
+        <div class="input-field col s12 m6 course">
           <select>
             <option value="" disabled selected>Select the course</option>
             <option value="Augusta National">Augusta National</option>
@@ -63,7 +31,7 @@
       {{test}}
       {{!-- {{#if results.length}} --}}
       {{#each teetimes }}
-      {{> homepagedetails}}
+      {{> searchingResult}}
       {{!-- <li class="result-card col s12 m6">
         <div class="card glass-blur">
           <div class="card-content">

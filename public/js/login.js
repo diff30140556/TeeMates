@@ -19,10 +19,12 @@ const loginFormHandler = async (event) => {
       // If successful, redirect the browser to the profile page
       document.location.replace('/userdash');
     } else {
-      alert(response.statusText);
+      const message = await response.json()
+      alertMessageEl.textContent = message.message;
     }
   }
 };
+const alertMessageEl = document.querySelector('.alertMessage')
 
 document
   .querySelector('#loginForm')
