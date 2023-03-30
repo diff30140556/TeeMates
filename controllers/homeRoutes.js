@@ -42,7 +42,6 @@ router.get('/userdash', withAuth, async (req, res) => {
 router.get('/teetimes', withAuth, async (req, res) => {
   try {
     const user_id = req.session.user_id;
-    console.log(user_id)
     const confirmedTeetimes = await TeeTime.findAll({
       include: [
         {

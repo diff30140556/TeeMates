@@ -7,7 +7,6 @@ const search = async (event) => {
     const date = datepickerEl.value;
 
     if (course_name !== 'Select the course' && date) {
-        console.log(course_name, date)
 
         const res = await fetch('/api/teetimes', {
             method: 'POST',
@@ -15,14 +14,11 @@ const search = async (event) => {
             headers: { 'Content-Type': 'application/json' },
         });
         if (res.ok) {
-            console.log('okay')
             results = await res.json()
-            console.log(results)
             let list = ``;
             results.map((result) => {
                 const resultDate = new Date(result.date);
                 const formattedDate = resultDate.toLocaleDateString();
-                console.log(formattedDate);
                 list += `
                 <li class="result-card col s12 m6">
                     <div class="card glass-blur">
@@ -43,7 +39,7 @@ const search = async (event) => {
             })
             resultListEl.innerHTML = list;
         } else {
-            console.log('not okay')
+            return;
         }
     }
 }
@@ -52,21 +48,13 @@ const attendTeeTime = async (event) => {
     event.preventDefault();
 
     if (event.target.className === 'attend-btn') {
-        console.log('attend')
         const teetimeId = event.target.dataset.teetimeid;
-        console.log(teetimeId);
 
         const res = await fetch('/api/teetimes/attend', {
             method: 'POST',
             body: JSON.stringify({ teetimeId }),
             headers: { 'Content-Type': 'application/json' },
         })
-
-        if (res.ok) {
-            console.log('pass')
-        } else {
-            console.log(res.statusText);
-        }
     }
 }
 
